@@ -1,0 +1,36 @@
+@import url('./assets/fonts/fonts.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.gradient-text {
+    background: linear-gradient(90deg, #f1b8f2, #f39634);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #0e100f;
+}
+
+.buttonInfo:hover {
+    background-color: #0e100f;
+    color: #fffce1;
+    transition: 0.25s cubic-bezier(0.61, 1, 0.88, 1);
+}
+
+.darkScreenButton:hover {
+    background-color: #fffce1;
+    color: #0e100f;
+    transition: 0.5s cubic-bezier(0.61, 1, 0.88, 1);
+}
+
+
+/* .bar {
+    width: 10vw;
+    height: 100vh;
+    background-color: #f39634;
+} */
