@@ -1,8 +1,8 @@
 import React from 'react'
-import spotifyBanner from "/src/assets/spotifybanner.svg";
+import simonsaysImage from "/src/assets/simonsays.svg";
 
 
-function Spotify() {
+function Simongame() {
   return (
     <div className="flex flex-col     bg-[#0e100f] text-[#ffffff] font-neue-montreal">
       <div
@@ -12,17 +12,16 @@ function Spotify() {
         <div className="keyDescription w-full md:w-1/2  h-screen flex flex-col    md:justify-between ">
           <div className="heading">
             <h1 className="text-[5vw] uppercase font-founders-grotesk text-[#fffce1] leading-none    ">
-              Spotify
+              Simon Says Game
             </h1>
           </div>
 
           <div className="summary pb-5 ">
             <p className="text-[20px]   ">
-              The Spotify project involved a comprehensive UX/UI redesign aimed
-              at enhancing the user experience and increasing user engagement.
-              By focusing on in-depth research and user insights, the project
-              sought to optimize the Spotify interface for a more intuitive and
-              engaging user journey.
+              The Simon Says project is a classic memory game where players must
+              follow an increasing sequence of colors and sounds. This project
+              allowed me to delve deep into JavaScript and understand its more
+              complex concepts.
             </p>
           </div>
 
@@ -32,9 +31,10 @@ function Spotify() {
             </div>
 
             {[
-              "Uncovered key user pain points in Spotify’s UX.",
-              "Recommended design enhancements to boost user engagement.",
-              "Validated design solutions through user testing.",
+              "Mastered Asynchronous Programming",
+              "Enhanced State Management",
+              "Advanced DOM Manipulation",
+              "Enhanced user feedback using visuals as well as sound",
             ].map((item, index) => (
               <div
                 key={index}
@@ -64,7 +64,7 @@ function Spotify() {
         <div className="keyMockup w-full md:w-1/2 h-screen rounded-xl overflow-hidden ">
           <img
             className="w-full h-full object-cover  "
-            src={spotifyBanner}
+            src={simonsaysImage}
             alt=""
           />
         </div>
@@ -84,8 +84,9 @@ function Spotify() {
               Challenge
             </div>
             <div className="challengeInfo text-[18px] text-zinc-500  ">
-              Identifying and addressing user pain points in the Spotify
-              interface.
+              Implementing complex state management and asynchronous timing for
+              a seamless and responsive gameplay experience across various
+              devices.
             </div>
           </div>
           <div className="oppurtunity">
@@ -93,8 +94,8 @@ function Spotify() {
               Opportunity
             </div>
             <div className="oppurtunityInfo text-[18px] text-zinc-500">
-              Improving user engagement and satisfaction through targeted design
-              improvements.
+              Leveraging JavaScript's advanced features to enhance coding skills
+              and create an engaging, interactive game.
             </div>
           </div>
         </div>
@@ -103,15 +104,17 @@ function Spotify() {
             <div className="timelineHeading text-[18px] font-semibold">
               Timeline
             </div>
-            <div className="timelineInfo  text-[18px] text-zinc-500  ">--</div>
+            <div className="timelineInfo  text-[18px] text-zinc-500  ">
+              2-3 Weeks
+            </div>
           </div>
           <div className="discipline w-1/2 md:w-1/4">
             <div className="disciplineHeading  text-[18px] font-semibold ">
               Discipline
             </div>
             <div className="disciplineInfo text-[18px] text-zinc-500 ">
-              <h3>User Experience Design</h3>
-              <h3>User Interface Design</h3>
+              <h3>Advanced Javascipt</h3>
+              <h3>Using UI for Feedback </h3>
             </div>
           </div>
           <div className="responsibilities w-1/2 md:w-1/4  md:mt-0  mt-5">
@@ -119,12 +122,11 @@ function Spotify() {
               Responsibilities
             </div>
             <div className="responsibilitiesMenu text-[18px] text-zinc-500">
-              <p>Conducted user research and usability testing.</p>
-              <p>Sketching</p>
-              <p>UX/UI Mobile Design</p>
+              <p>Designed game logic and user interactions.</p>
+              <p>Implemented features to enhance gameplay experience.</p>
               <p>
-                Provided actionable insights and recommendations for design
-                improvements.
+                Ensured smooth functionality and bug-free performance across
+                various scenario.
               </p>
             </div>
           </div>
@@ -132,6 +134,7 @@ function Spotify() {
             <div className="toolsHeading text-[18px] font-semibold">Tools</div>
             <div className="toolsMenu text-[18px] text-zinc-500">
               <p>Figma</p>
+              <p>VSCode</p>
             </div>
           </div>
         </div>
@@ -257,4 +260,4 @@ function Spotify() {
   );
 }
 
-export default Spotify
+export default Simongame

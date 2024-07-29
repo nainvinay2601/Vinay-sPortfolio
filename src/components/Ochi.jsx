@@ -1,67 +1,82 @@
 import React from "react";
+import ochiImage from "/src/assets/ochi.svg";
 
-function Ochi() {
+
+function Spotify() {
   return (
     <div className="flex flex-col     bg-[#0e100f] text-[#ffffff] font-neue-montreal">
-      <div className="mainBackground flex  w-full pt-20 px-20 gap-10 text-[#ffffff]   ">
-        <div className="keyDescription w-1/2  h-screen flex flex-col    justify-between ">
+      <div
+        className="mainBackground flex flex-col md:flex-row
+       w-full pt-20 px-10 md:px-20 md:gap-10  text-[#ffffff]   "
+      >
+        <div className="keyDescription w-full md:w-1/2  h-screen flex flex-col    md:justify-between ">
           <div className="heading">
-            <h1 className="text-[5vw] uppercase font-founders-grotesk text-[#fffce1] leading-none ">
-              BirthVenue
+            <h1 className="text-[5vw] uppercase font-founders-grotesk text-[#fffce1] leading-none    ">
+              Ochi
             </h1>
           </div>
 
           <div className="summary pb-5 ">
             <p className="text-[20px]   ">
-              Designed a web3 social media app to improve user onboarding and
-              provide customizable social media experiences, with monetization
-              options for users as well.
+              Ochi is a dynamic landing page designed to captivate users through
+              visually striking presentations and interactive animations. Built
+              using React.js and Tailwind CSS, it combines a responsive layout
+              with seamless, eye-catching animations powered by GSAP and Framer
+              Motion. The project showcases the application of modern web
+              technologies to enhance user engagement and create a memorable
+              first impression.
             </p>
           </div>
 
-          <div className="achievments mt-6 ">
-            <div className="text-[3vw]  font-founders-grotesk font-semibold  uppercase border-b-[1px] border-zinc-500  inline-block mb-6 text-[#fffce1]">
+          <div className="achievments mt-0 ">
+            <div className="text-[5vw]   font-founders-grotesk font-semibold  uppercase border-b-[1px] border-zinc-500  inline-block mb-6 text-[#fffce1]">
               <p>Key Achievements</p>
             </div>
 
             {[
-              "Improved user onboarding",
-              "Offered customizable content",
-              "ad preferences",
-              "enhanced data privacy settings",
+              "Designed an engaging landing page with React.js and Tailwind CSS.",
+              "Implemented dynamic animations using GSAP and Framer Motion.",
+              "Enhanced user experience through advanced animation techniques.",
             ].map((item, index) => (
               <div
                 key={index}
-                className="text-[18px] pb-2  font-neue-montreal flex items-center gap-3 capitalize"
+                className="text-[18px] pb-2   font-neue-montreal flex items-center gap-3 capitalize"
               >
                 <p className="w-[1vw] h-[1vw] rounded-full bg-zinc-300"></p>
                 {item}
               </div>
             ))}
           </div>
-          <div className="links flex items-center justify-center gap-3 mt-5 buttonInfo border border-solid border-zinc-200 rounded-full px-4 py-1 w-fit group bg-[#fffce1] text-[#000] font-medium ">
-            <div className="text text-[16px] uppercase">
-              <p>Prototype</p>
-            </div>
-            <div className="arrow text-[25px] transform transition-transform duration-300 group-hover:rotate-[-45deg]">
-              <span>&rarr;</span>
-            </div>
+
+          <div className="buttonLinks flex gap-5">
+            {["Prototype", "Full case study"].map((item, index) => (
+              <div
+                key={index}
+                className="links flex items-center justify-center gap-3 mt-5 buttonInfo border border-solid border-zinc-200 rounded-full px-4 py-1 w-fit group bg-[#fffce1] text-[#000] font-medium  uppercase   "
+              >
+                <p>{item}</p>
+
+                <div className="arrow text-[25px] transform transition-transform duration-300 group-hover:rotate-[-45deg]">
+                  <span>&rarr;</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="keyMockup w-1/2 h-screen rounded-xl overflow-hidden ">
+        <div className="keyMockup w-full md:w-1/2 h-screen rounded-xl overflow-hidden  mt-20 md:mt-0">
           <img
             className="w-full h-full object-cover  "
-            src="https://images.unsplash.com/photo-1721807578532-dc1756624727?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"
+            src={ochiImage}
             alt=""
           />
         </div>
       </div>
-      <div className="processHighlight  w-full  p-20  bg-[#0e100f]   ">
+      <div className="processHighlight  w-full  px-10 py-20 md:p-20  bg-[#0e100f]   ">
         <div className="headings border-b-[1px] border-zinc-600 pb-2 ">
           <div className="semiHeading text-[16px] uppercase text-zinc-500  ">
             Process Highlights
           </div>
-          <div className="headingMain text-[2vw]">
+          <div className="headingMain text-[4vw] md:text-[2vw]  ">
             Design challenge and responsibilities overview
           </div>
         </div>
@@ -71,8 +86,8 @@ function Ochi() {
               Challenge
             </div>
             <div className="challengeInfo text-[18px] text-zinc-500  ">
-              Design an app connecting digital devices with real-life
-              experiences and social interactions.
+              Mastered React.js and Tailwind CSS for building a dynamic and
+              responsive landing page while incorporating animation frameworks.
             </div>
           </div>
           <div className="oppurtunity">
@@ -80,42 +95,43 @@ function Ochi() {
               Opportunity
             </div>
             <div className="oppurtunityInfo text-[18px] text-zinc-500">
-              Create a unique app, linking multiple brands to enhance user
-              engagement and achieve business goals.
+              Utilized GSAP and Framer Motion to enhance user experience with
+              captivating animations, setting the landing page apart from
+              others.
             </div>
           </div>
         </div>
-        <div className="lastInfo flex justify-between py-8 ">
-          <div className="timeLine">
+        <div className="lastInfo flex flex-wrap justify-between py-8 ">
+          <div className="timeLine w-1/2 md:w-1/4 ">
             <div className="timelineHeading text-[18px] font-semibold">
               Timeline
             </div>
             <div className="timelineInfo  text-[18px] text-zinc-500  ">
-              Nov2022-June-2023
+              2 Weeks
             </div>
           </div>
-          <div className="discipline">
+          <div className="discipline w-1/2 md:w-1/4">
             <div className="disciplineHeading  text-[18px] font-semibold ">
               Discipline
             </div>
             <div className="disciplineInfo text-[18px] text-zinc-500 ">
-              <h3>User Experience Design</h3>
-              <h3>User Interface Design</h3>
+              <h3>Frontend Development</h3>
+              <h3>Animation Integration</h3>
             </div>
           </div>
-          <div className="responsibilities">
+          <div className="responsibilities w-1/2 md:w-1/4  md:mt-0  mt-5">
             <div className="responsibilitiesHeading  text-[18px] font-semibold ">
               Responsibilities
             </div>
             <div className="responsibilitiesMenu text-[18px] text-zinc-500">
-              <p>UX Research</p>
-              <p>Sketching</p>
-              <p>UX/UI Mobile Design</p>
-              <p>Web Data Design</p>
-              <p>Prototyping</p>
+              <p>Developed the landing page using React.js and Tailwind CSS.</p>
+              <p>Integrated animations with GSAP and Framer Motion.</p>
+              <p>
+                Ensured a visually appealing and interactive user experience.
+              </p>
             </div>
           </div>
-          <div className="tools">
+          <div className="tools w-1/2 mt-5 md:w-1/4  md:mt-0 ">
             <div className="toolsHeading text-[18px] font-semibold">Tools</div>
             <div className="toolsMenu text-[18px] text-zinc-500">
               <p>Figma</p>
@@ -123,7 +139,7 @@ function Ochi() {
             </div>
           </div>
         </div>
-        <div className="links flex items-center justify-center gap-3 buttonInfo border border-solid border-zinc-200 rounded-full px-4 py-2 w-fit group bg-[#fffce1] text-[#000] font-medium ">
+        <div className="links mt-5 flex items-center justify-center gap-3 buttonInfo border border-solid border-zinc-200 rounded-full px-4 py-2 w-fit group bg-[#fffce1] text-[#000] font-medium ">
           <div className="text text-[18px] uppercase">
             <p>Full Case Study</p>
           </div>
@@ -245,4 +261,4 @@ function Ochi() {
   );
 }
 
-export default Ochi;
+export default Spotify;

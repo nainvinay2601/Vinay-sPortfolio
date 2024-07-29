@@ -47,19 +47,17 @@ function Hero() {
       data-scroll
       data-scroll-section
       data-scroll-speed="-0.4"
-      className="w-full h-screen flex flex-col pt-1 bg-[#0e100f] text-[#fffce1]"
+      className="w-full md:h-screen flex flex-col pt-1 bg-[#0e100f] text-[#fffce1]"
     >
       <div className="textAndButtonStructure flex flex-col justify-between">
-        <div className="textStructure  mt-40 px-10 md:px-20 ">
+        <div className="textStructure mt-20   md:mt-40 px-10 md:px-20 ">
           <div
             ref={(el) => (semiHeadRef.current[0] = el)}
             className="skillButton flex gap-2 text-xs pb-2 md:text-[16px] "
           >
-           
-              <button className="border uppercase border-solid border-zinc-400   px-2 py-1   font-neue-montreal rounded-full">
-                Frontend Developer
-              </button>
-            
+            <button className="border uppercase border-solid border-zinc-400   px-2 py-1   font-neue-montreal rounded-full">
+              Frontend Developer
+            </button>
 
             <button
               ref={(el) => (semiHeadRef.current[1] = el)}
@@ -109,10 +107,11 @@ function Hero() {
               </div>
             </a>
           </div>
-
+          <a href="mailto:vinaynain2601@gmail.com?subject=Contact%20from%20Portfolio">
           <div className="startProject px-3 py-1 my-7  uppercase border border-solid border-zinc-400 rounded-full darkScreenButton w-fit">
             Start a project
-          </div>
+          </div> 
+          </a>
         </div>
       </div>
     </div>

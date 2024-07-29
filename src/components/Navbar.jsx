@@ -39,13 +39,16 @@ function Navbar() {
   const navItems = [
     { name: "About", link: "#about" },
     { name: "Services", link: "#services" },
-    { name: "Projects", link: "#projects" }, 
+    { name: "Projects", link: "#projects" }, // Updated link
     {
       name: "Resume",
       link: "/src/assets/resumeVinayNainFrontendDev.pdf",
       download: true,
     },
-    { name: "Contact Me", link: "#contact" },
+    {
+      name: "Contact Me",
+      link: "mailto:vinaynain2601@gmail.com?subject=Contact%20from%20Portfolio",
+    },
   ];
 
   return (
@@ -64,8 +67,10 @@ function Navbar() {
           {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
+
       <div
-        className={`navItems h-screen md:h-fit flex-col md:flex-row md:flex md:justify-center md:items-center gap-5 absolute md:static top-16 left-0 w-full md:w-auto bg-[#0e100f] md:bg-transparent text-[16vw] md:text-[15px] uppercase md:capitalize font-founders-grotesk md:font-neue-montreal px-10 md:px-0 pt-3 md:pt-0 ${
+        ref={navLinksRef}
+        className={`navItems h-screen md:h-fit flex-col md:flex-row md:flex md:justify-center md:items-center gap-5 absolute md:static top-16 left-0 w-full md:w-auto bg-[#0e100f] md:bg-transparent text-[16vw] md:text-[15px] uppercase md:capitalize font-founders-grotesk md:font-neue-montreal px-10 md:px-0 pt-3 md:pt-0  ${
           menuOpen ? "flex" : "hidden"
         }`}
       >

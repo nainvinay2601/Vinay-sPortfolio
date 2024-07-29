@@ -1,20 +1,15 @@
-import React,{useState,useEffect} from "react";
-import Loading from "./Loading";
+import React from "react";
 
 function BirthVenue() {
-  // const [loading, setLoading] = useState(true);
-
-  //  useEffect(() => {
-  //    // Simulate a loading state
-  //    const timer = setTimeout(() => setLoading(false), 3000);
-  //    return () => clearTimeout(timer);
-  //  }, []);
   return (
     <div className="flex flex-col     bg-[#0e100f] text-[#ffffff] font-neue-montreal">
-      <div className="mainBackground flex  w-full pt-20 px-20 gap-10 text-[#ffffff]   ">
-        <div className="keyDescription w-1/2  h-screen flex flex-col    justify-between ">
+      <div
+        className="mainBackground flex flex-col md:flex-row
+       w-full pt-20 px-10 md:px-20 md:gap-10  text-[#ffffff]   "
+      >
+        <div className="keyDescription w-full md:w-1/2  h-screen flex flex-col    md:justify-between ">
           <div className="heading">
-            <h1 className="text-[5vw] uppercase font-founders-grotesk text-[#fffce1] leading-none ">
+            <h1 className="text-[5vw] uppercase font-founders-grotesk text-[#fffce1] leading-none    ">
               BirthVenue
             </h1>
           </div>
@@ -27,8 +22,8 @@ function BirthVenue() {
             </p>
           </div>
 
-          <div className="achievments mt-6 ">
-            <div className="text-[3vw]  font-founders-grotesk font-semibold  uppercase border-b-[1px] border-zinc-500  inline-block mb-6 text-[#fffce1]">
+          <div className="achievments mt-0 ">
+            <div className="text-[5vw]   font-founders-grotesk font-semibold  uppercase border-b-[1px] border-zinc-500  inline-block mb-6 text-[#fffce1]">
               <p>Key Achievements</p>
             </div>
 
@@ -40,36 +35,43 @@ function BirthVenue() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="text-[18px] pb-2  font-neue-montreal flex items-center gap-3 capitalize"
+                className="text-[18px] pb-2   font-neue-montreal flex items-center gap-3 capitalize"
               >
                 <p className="w-[1vw] h-[1vw] rounded-full bg-zinc-300"></p>
                 {item}
               </div>
             ))}
           </div>
-          <div className="links flex items-center justify-center gap-3 mt-5 buttonInfo border border-solid border-zinc-200 rounded-full px-4 py-1 w-fit group bg-[#fffce1] text-[#000] font-medium ">
-            <div className="text text-[16px] uppercase">
-              <p>Prototype</p>
-            </div>
-            <div className="arrow text-[25px] transform transition-transform duration-300 group-hover:rotate-[-45deg]">
-              <span>&rarr;</span>
-            </div>
+
+          <div className="buttonLinks flex gap-5">
+            {["Prototype", "Full case study"].map((item, index) => (
+              <div
+                key={index}
+                className="links flex items-center justify-center gap-3 mt-5 buttonInfo border border-solid border-zinc-200 rounded-full px-4 py-1 w-fit group bg-[#fffce1] text-[#000] font-medium  uppercase   "
+              >
+                <p>{item}</p>
+
+                <div className="arrow text-[25px] transform transition-transform duration-300 group-hover:rotate-[-45deg]">
+                  <span>&rarr;</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="keyMockup w-1/2 h-screen rounded-xl overflow-hidden ">
+        <div className="keyMockup w-full md:w-1/2 h-screen rounded-xl overflow-hidden ">
           <img
-            className="w-full h-full object-cover  "
-            src="https://images.unsplash.com/photo-1721807578532-dc1756624727?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"
+            className="w-full h-full object-cover"
+            src="https://ochi.design/wp-content/uploads/2023/10/Fyde_Illustration_Crypto_2-1326x1101.png"
             alt=""
           />
         </div>
       </div>
-      <div className="processHighlight  w-full  p-20  bg-[#0e100f]   ">
+      <div className="processHighlight  w-full  px-10 py-20 md:p-20  bg-[#0e100f]   ">
         <div className="headings border-b-[1px] border-zinc-600 pb-2 ">
           <div className="semiHeading text-[16px] uppercase text-zinc-500  ">
             Process Highlights
           </div>
-          <div className="headingMain text-[2vw]">
+          <div className="headingMain text-[4vw] md:text-[2vw]  ">
             Design challenge and responsibilities overview
           </div>
         </div>
@@ -93,8 +95,8 @@ function BirthVenue() {
             </div>
           </div>
         </div>
-        <div className="lastInfo flex justify-between py-8 ">
-          <div className="timeLine">
+        <div className="lastInfo flex flex-wrap justify-between py-8 ">
+          <div className="timeLine w-1/2 md:w-1/4 ">
             <div className="timelineHeading text-[18px] font-semibold">
               Timeline
             </div>
@@ -102,7 +104,7 @@ function BirthVenue() {
               Nov2022-June-2023
             </div>
           </div>
-          <div className="discipline">
+          <div className="discipline w-1/2 md:w-1/4">
             <div className="disciplineHeading  text-[18px] font-semibold ">
               Discipline
             </div>
@@ -111,7 +113,7 @@ function BirthVenue() {
               <h3>User Interface Design</h3>
             </div>
           </div>
-          <div className="responsibilities">
+          <div className="responsibilities w-1/2 md:w-1/4  md:mt-0  mt-5">
             <div className="responsibilitiesHeading  text-[18px] font-semibold ">
               Responsibilities
             </div>
@@ -123,7 +125,7 @@ function BirthVenue() {
               <p>Prototyping</p>
             </div>
           </div>
-          <div className="tools">
+          <div className="tools w-1/2 mt-5 md:w-1/4  md:mt-0 ">
             <div className="toolsHeading text-[18px] font-semibold">Tools</div>
             <div className="toolsMenu text-[18px] text-zinc-500">
               <p>Figma</p>
@@ -131,7 +133,7 @@ function BirthVenue() {
             </div>
           </div>
         </div>
-        <div className="links flex items-center justify-center gap-3 buttonInfo border border-solid border-zinc-200 rounded-full px-4 py-2 w-fit group bg-[#fffce1] text-[#000] font-medium ">
+        <div className="links mt-5 flex items-center justify-center gap-3 buttonInfo border border-solid border-zinc-200 rounded-full px-4 py-2 w-fit group bg-[#fffce1] text-[#000] font-medium ">
           <div className="text text-[18px] uppercase">
             <p>Full Case Study</p>
           </div>
@@ -250,13 +252,6 @@ function BirthVenue() {
         </div>
       </div>
     </div>
-
-    // <div>
-    //   {loading && <Loading show={loading} />}
-    //   {!loading && (
-
-    //   )}
-    // </div>
   );
 }
 

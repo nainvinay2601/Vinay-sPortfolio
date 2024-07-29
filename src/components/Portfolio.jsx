@@ -1,8 +1,8 @@
 import React from 'react'
-import spotifyBanner from "/src/assets/spotifybanner.svg";
+import portfolioImage from "/src/assets/portfolioweb.svg";
 
 
-function Spotify() {
+function Portfolio() {
   return (
     <div className="flex flex-col     bg-[#0e100f] text-[#ffffff] font-neue-montreal">
       <div
@@ -12,17 +12,15 @@ function Spotify() {
         <div className="keyDescription w-full md:w-1/2  h-screen flex flex-col    md:justify-between ">
           <div className="heading">
             <h1 className="text-[5vw] uppercase font-founders-grotesk text-[#fffce1] leading-none    ">
-              Spotify
+              BirthVenue
             </h1>
           </div>
 
           <div className="summary pb-5 ">
             <p className="text-[20px]   ">
-              The Spotify project involved a comprehensive UX/UI redesign aimed
-              at enhancing the user experience and increasing user engagement.
-              By focusing on in-depth research and user insights, the project
-              sought to optimize the Spotify interface for a more intuitive and
-              engaging user journey.
+              Designed a web3 social media app to improve user onboarding and
+              provide customizable social media experiences, with monetization
+              options for users as well.
             </p>
           </div>
 
@@ -32,9 +30,10 @@ function Spotify() {
             </div>
 
             {[
-              "Uncovered key user pain points in Spotify’s UX.",
-              "Recommended design enhancements to boost user engagement.",
-              "Validated design solutions through user testing.",
+              "Improved user onboarding",
+              "Offered customizable content",
+              "ad preferences",
+              "enhanced data privacy settings",
             ].map((item, index) => (
               <div
                 key={index}
@@ -64,7 +63,7 @@ function Spotify() {
         <div className="keyMockup w-full md:w-1/2 h-screen rounded-xl overflow-hidden ">
           <img
             className="w-full h-full object-cover  "
-            src={spotifyBanner}
+            src={portfolioImage}
             alt=""
           />
         </div>
@@ -84,8 +83,8 @@ function Spotify() {
               Challenge
             </div>
             <div className="challengeInfo text-[18px] text-zinc-500  ">
-              Identifying and addressing user pain points in the Spotify
-              interface.
+              Design an app connecting digital devices with real-life
+              experiences and social interactions.
             </div>
           </div>
           <div className="oppurtunity">
@@ -93,8 +92,8 @@ function Spotify() {
               Opportunity
             </div>
             <div className="oppurtunityInfo text-[18px] text-zinc-500">
-              Improving user engagement and satisfaction through targeted design
-              improvements.
+              Create a unique app, linking multiple brands to enhance user
+              engagement and achieve business goals.
             </div>
           </div>
         </div>
@@ -103,7 +102,9 @@ function Spotify() {
             <div className="timelineHeading text-[18px] font-semibold">
               Timeline
             </div>
-            <div className="timelineInfo  text-[18px] text-zinc-500  ">--</div>
+            <div className="timelineInfo  text-[18px] text-zinc-500  ">
+              Nov2022-June-2023
+            </div>
           </div>
           <div className="discipline w-1/2 md:w-1/4">
             <div className="disciplineHeading  text-[18px] font-semibold ">
@@ -119,19 +120,18 @@ function Spotify() {
               Responsibilities
             </div>
             <div className="responsibilitiesMenu text-[18px] text-zinc-500">
-              <p>Conducted user research and usability testing.</p>
+              <p>UX Research</p>
               <p>Sketching</p>
               <p>UX/UI Mobile Design</p>
-              <p>
-                Provided actionable insights and recommendations for design
-                improvements.
-              </p>
+              <p>Web Data Design</p>
+              <p>Prototyping</p>
             </div>
           </div>
           <div className="tools w-1/2 mt-5 md:w-1/4  md:mt-0 ">
             <div className="toolsHeading text-[18px] font-semibold">Tools</div>
             <div className="toolsMenu text-[18px] text-zinc-500">
               <p>Figma</p>
+              <p>VSCode</p>
             </div>
           </div>
         </div>
@@ -257,4 +257,4 @@ function Spotify() {
   );
 }
 
-export default Spotify
+export default Portfolio

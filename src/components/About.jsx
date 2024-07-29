@@ -25,7 +25,7 @@ function About() {
           </button>
         </div>
 
-        <div className="w-1/2 h-[70vh] rounded-2xl bg-[#d3a790] "></div>
+        <div className="w-1/2 h-[70vh] rounded-2xl bg-[#d3a790] hidden "></div>
       </div>
     </div>
   );

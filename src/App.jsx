@@ -13,6 +13,8 @@ import Spotify from "./components/Spotify";
 import Ochi from "./components/Ochi";
 import ScrollToTop from "./ScrollToTop";
 import Swoleyfit from "./components/Swoleyfit";
+import Simongame from "./components/Simongame";
+import Portfolio from "./components/Portfolio";
 
 
 function App() {
@@ -41,6 +43,8 @@ function App() {
         <Route path="/spotify" element={<Spotify />} />
         <Route path="/ochi" element={<Ochi />} />
         <Route path="/swoleygymapp" element={<Swoleyfit />} />
+        <Route path="/simonsaysgame" element={<Simongame />} />
+        <Route path="/portfoliio" element={<Portfolio />} />
       </Routes>
     </Router>
   );

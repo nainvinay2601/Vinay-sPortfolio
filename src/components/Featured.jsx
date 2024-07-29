@@ -3,6 +3,12 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import HoverCard from "./HoverCard";
 
+import ochiImage from "/src/assets/ochi.svg"
+import simonsaysImage from "/src/assets/simonsays.svg"
+import portfolioImage from "/src/assets/portfolioweb.svg"
+import spotifyBanner from "/src/assets/spotifybanner.svg"
+import swoleyFitImage from "/src/assets/Swoleyfit.svg"
+
 function Featured() {
   const navigate = useNavigate();
 
@@ -31,6 +37,11 @@ function Featured() {
     { text: "Github", link: "https://github.com/nainvinay2601/simongame.git" },
     { text: "Live", link: "https://simongamechlnge.netlify.app/" },
   ];
+  const buttonLinkPortfolio = [
+    { text: "Case Study", link: "https://your-casestudy-link.com" },
+    { text: "Github", link: "https://github.com/nainvinay2601/simongame.git" },
+    { text: "Live", link: "https://vinaynainportfolio.netlify.app/" },
+  ];
   const buttonLinkSwoleyFit = [
     { text: "Case Study", link: "https://your-casestudy-link.com" },
     { text: "Github", link: "https://github.com/nainvinay2601/GymApp.git" },
@@ -55,7 +66,7 @@ function Featured() {
           Featured projects <span>&rarr;</span>
         </h1>
       </div>
-      <div className="projectsContainer pb-20"  id="frontendContainer" >
+      <div className="projectsContainer pb-20" id="frontendContainer">
         <div className="projectSection px-10 md:px-20 font-founders-grotesk text-[5vw] md:text-[3vw]  md:pt-10  pt-5   md:mb-5 mb-3 uppercase ">
           <p className="border-b-[1px] border-zinc-600">
             1. Front-end Projects
@@ -69,19 +80,22 @@ function Featured() {
             </div>
             <HoverCard
               title="PORTFOLIO"
-              imgSrc="/src/assets/portfolioweb.svg"
+              imgSrc={portfolioImage}
               textAlignClass="left-full"
               translateClass="-translate-x-1/2"
               onClick={handleCardClick} // Pass the click handler
             />
             <div className="infoButton flex gap-3 pt-4 ">
-              {["Case Study", "Github", "Live"].map((item, index) => (
-                <div
+              {buttonLinkPortfolio.map((item, index) => (
+                <a
                   key={index}
-                  className="buttonInfo border border-solid border-zinc-950 px-6 py-2 text-md rounded-full flex justify-center items-center text-[16px] uppercase "
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="buttonInfo border border-solid border-zinc-950 px-4 md:px-6 py-2  text-sm rounded-full flex justify-center items-center md:text-[16px] uppercase "
                 >
-                  {item}
-                </div>
+                  {item.text}
+                </a>
               ))}
             </div>
           </div>
@@ -92,7 +106,7 @@ function Featured() {
             </div>
             <HoverCard
               title="SWOLEYGYM"
-              imgSrc="/src/assets/Swoleyfit.svg"
+              imgSrc={swoleyFitImage}
               textAlignClass="right-full"
               translateClass="translate-x-1/2"
               onClick={handleCardClick} // Pass the click handler
@@ -104,7 +118,7 @@ function Featured() {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="buttonInfo border border-solid border-zinc-950 px-6 py-2 text-md rounded-full flex justify-center items-center text-[16px] uppercase"
+                  className="buttonInfo border border-solid border-zinc-950 px-4 md:px-6 py-2  text-sm rounded-full flex justify-center items-center md:text-[16px] uppercase "
                 >
                   {item.text}
                 </a>
@@ -120,7 +134,7 @@ function Featured() {
             </div>
             <HoverCard
               title="SIMONSAYS"
-              imgSrc="/src/assets/simonsays.svg"
+              imgSrc={simonsaysImage}
               textAlignClass="left-full"
               translateClass="-translate-x-1/2"
               onClick={handleCardClick} // Pass the click handler
@@ -132,7 +146,7 @@ function Featured() {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="buttonInfo border border-solid border-zinc-950 px-6 py-2 text-md rounded-full flex justify-center items-center text-[16px] uppercase"
+                  className="buttonInfo border border-solid border-zinc-950 px-4 md:px-6 py-2  text-sm rounded-full flex justify-center items-center md:text-[16px] uppercase "
                 >
                   {item.text}
                 </a>
@@ -146,7 +160,7 @@ function Featured() {
             </div>
             <HoverCard
               title="OCHI"
-              imgSrc="/src/assets/ochi.svg"
+              imgSrc={ochiImage}
               textAlignClass="right-full"
               translateClass="translate-x-1/2"
               onClick={handleCardClick} // Pass the click handler
@@ -158,7 +172,7 @@ function Featured() {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="buttonInfo border border-solid border-zinc-950 px-6 py-2 text-md rounded-full flex justify-center items-center text-[16px] uppercase"
+                  className="buttonInfo border border-solid border-zinc-950 px-4 md:px-6 py-2  text-sm rounded-full flex justify-center items-center md:text-[16px] uppercase "
                 >
                   {item.text}
                 </a>
@@ -168,7 +182,7 @@ function Featured() {
         </div>
       </div>
 
-      <div className="projectsContainer  "  id="designContainer">
+      <div className="projectsContainer  " id="designContainer">
         <div
           className="designSection md:px-20 px-10 font-founders-grotesk md:text-[3vw] text-[5vw] md:pt-5 md:mb-5  pt-3 mb-2 uppercase "
           id={"designContainer"}
@@ -192,7 +206,7 @@ function Featured() {
               {["Case Study", "Prototype"].map((item, index) => (
                 <div
                   key={index}
-                  className="buttonInfo border border-solid border-zinc-950 px-6 py-2 text-md rounded-full flex justify-center items-center text-[16px] uppercase "
+                  className="buttonInfo border border-solid border-zinc-950 px-4 md:px-6 py-2  text-sm rounded-full flex justify-center items-center md:text-[16px] uppercase "
                 >
                   {item}
                 </div>
@@ -206,7 +220,7 @@ function Featured() {
             </div>
             <HoverCard
               title="SPOTIFY"
-              imgSrc="/src/assets/spotifybanner.svg"
+              imgSrc={spotifyBanner}
               textAlignClass="right-full"
               translateClass="translate-x-1/2"
               onClick={handleCardClick} // Pass the click handler
@@ -215,7 +229,7 @@ function Featured() {
               {["Case Study", "Prototype"].map((item, index) => (
                 <div
                   key={index}
-                  className="buttonInfo border border-solid border-zinc-950 px-6 py-2 text-md rounded-full flex justify-center items-center  text-[16px] uppercase "
+                  className="buttonInfo border border-solid border-zinc-950 px-4 md:px-6 py-2  text-sm rounded-full flex justify-center items-center md:text-[16px] uppercase "
                 >
                   {item}
                 </div>
