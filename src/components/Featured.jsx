@@ -39,7 +39,10 @@ function Featured() {
   ];
   const buttonLinkPortfolio = [
     { text: "Case Study", link: "https://your-casestudy-link.com" },
-    { text: "Github", link: "https://github.com/nainvinay2601/simongame.git" },
+    {
+      text: "Github",
+      link: "https://github.com/nainvinay2601/Vinay-sPortfolio.git",
+    },
     { text: "Live", link: "https://vinaynainportfolio.netlify.app/" },
   ];
   const buttonLinkSwoleyFit = [
